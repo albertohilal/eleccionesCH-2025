@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elecciones 2025</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Elecciones 2025 - Unidad para enfrentar el ajuste">
-    <meta property="og:description" content="Luchamos por la unidad de la docencia de las universidades nacionales.">
-    <meta property="og:image" content="https://fudu.ar.nf/unidad.jpg">
-    <meta property="og:url" content="https://fudu.ar.nf/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_ES">
-
+     <!-- Open Graph Meta Tags -->
+     <meta property="og:title" content="Elecciones 2025 - Unidad para enfrentar el ajuste">
+     <meta property="og:description" content="Luchamos por la unidad de la docencia de las universidades nacionales.">
+     <meta property="og:image" content="https://fudu.ar.nf/images/unidad.jpg">
+     <meta property="og:url" content="https://fudu.ar.nf/">
+     <meta property="og:type" content="website">
+     <meta property="og:locale" content="es_ES">
 </head>
-
 <body>
     <div class="container">
+        <header id="menu-container"></header>
+        
         <div class="header">La más amplia unidad para enfrentar las políticas de ajuste del gobierno de Milei</div>
-        <div class="sub-header">Este año -2025- tenemos que persistir y profundizar el camino de enfrentar el ajuste con
-            la más amplia unidad posible porque el gobierno se plantea ir a fondo con sus políticas reaccionarias sobre
-            la universidad, la educación pública y sobre el conjunto de las mayorías populares.</div>
+        <div class="sub-header">Este año -2025- tenemos que persistir y profundizar el camino de enfrentar el ajuste con la más amplia unidad posible porque el gobierno se plantea ir a fondo con sus políticas reaccionarias sobre la universidad, la educación pública y sobre el conjunto de las mayorías populares.</div>
+        
         <div class="content">
             <p>El gobierno de Javier Milei aplica una política de <span class="highlight">empobrecimiento</span> de las
                 mayorías populares -en beneficio de un grupo minoritario de los grandes poderes económicos-, de <span
@@ -65,16 +63,18 @@
                     ajuste, luchar por nuestros salarios y el presupuesto universitario, con la más amplia unidad
                     posible.</span></p>
         </div>
-        <div class="footer">CON ESTE ESPÍRITU PARA LAS PRÓXIMAS ELECCIONES DE CONADU HISTÓRICA CONFORMAMOS VARIOS
-            ESPACIOS EL FRENTE POR LA UNIDAD DE LA DOCENCIA DE LAS UNIVERSIDADES NACIONALES</div>
-        <div class="vote-section">
-            <div class="vote-box">LISTA 1</div>
-            <div class="vote-info">
-                <p>Francisca STATI - Secretaria General</p>
-                <p>Oscar VALLEJOS - Secretaria Adjunta</p>
-            </div>
-        </div>
+        
+        <div class="footer">CON ESTE ESPÍRITU PARA LAS PRÓXIMAS ELECCIONES DE CONADU HISTÓRICA CONFORMAMOS CON OTROS ESPACIOS EL FRENTE POR LA UNIDAD DE LA DOCENCIA DE LAS UNIVERSIDADES NACIONALES</div>
     </div>
-</body>
 
+    <script>
+        // Cargar el menú de navegación desde menu.html
+        fetch("menu.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("menu-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error cargando el menú:", error));
+    </script>
+</body>
 </html>

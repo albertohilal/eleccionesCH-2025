@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad para Luchar</title>
+    <link rel="stylesheet" href="../styles.css">
+    <meta property="og:title" content="Unidad para luchar">
+    <meta property="og:description" content="Luchamos por la unidad de la docencia de las universidades nacionales.">
+    <meta property="og:image" content="https://fudu.ar.nf/images/para-accion.jpg">
+    <meta property="og:url" content="https://fudu.ar.nf/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+</head>
+<body>
+    <div class="container">
+        <header id="menu-container"></header>
+        <header class="header">
+            
+            UNIDAD PARA LUCHAR, NO PARA DIVIDIR
+        </header>
+        <div class="content">
+            <p>En CONADU Histórica, reafirmamos nuestro compromiso con la lucha docente en defensa del salario, la universidad pública y la estabilidad laboral. En tiempos de brutal ajuste contra la educación y la ciencia, no hay margen para especulaciones ni para el divisionismo que solo beneficia al gobierno y a las patronales.</p>
+            <p>La Lista Naranja nos interpela con una falsa disyuntiva: "unidad para profundizar la lucha o la 'más amplia unidad' para hacer la plancha". Le respondemos con hechos: la unidad construida en CONADU Histórica no ha significado nunca renunciar a la lucha, sino fortalecerla. Los paros, movilizaciones y plenarios que hemos protagonizado no fueron meros gestos, sino acciones concretas con impacto real en nuestra pelea por mejores condiciones laborales y salariales.</p>
+            <p>Lo que resulta evidente es que, en la práctica, la Lista Naranja golpea más a quienes luchamos que al gobierno de Milei, en un intento de diferenciación que responde más a un interés electoralista que a una estrategia real para enfrentar el ajuste. En lugar de concentrar los ataques en quienes impulsan políticas de hambre y precarización, buscan sembrar la desconfianza dentro de las propias filas del sindicalismo combativo.</p>
+            <p>No aceptamos que se nos tilde de conciliadores o de "hacer la plancha" cuando hemos estado en cada instancia de lucha, con medidas discutidas y votadas democráticamente en asambleas y congresos. Es en esos espacios donde se define el camino a seguir, y no en textos que buscan dividir a quienes peleamos por lo mismo.</p>
+            <p>A quienes proponen la ruptura y el ataque interno, los invitamos a construir desde la pluralidad y el debate sincero. La unidad de la docencia universitaria no puede ser utilizada como herramienta de faccionalismo electoral, sino como un arma para enfrentar los embates de un gobierno que nos quiere aislados y debilitados.</p>
+            <p><strong>Por una CONADU Histórica fuerte y combativa, sin sectarismos ni exclusiones. ¡Unidad para luchar y vencer!</strong></p>
+        </div>
+        <footer class="footer">
+            <a href="../index.html" class="btn">VOLVER A INICIO</a>
+        </footer>
+    </div>
+    <script>
+        // Cargar el menú de navegación desde la ruta correcta
+        fetch("../menu.html")  // Subir un nivel en la estructura de carpetas
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("menu-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error cargando el menú:", error));
+    </script>
+    </body>
+    
+</html>

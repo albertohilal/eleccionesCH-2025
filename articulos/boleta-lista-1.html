@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad para Luchar</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header id="menu-container"></header>
+        <header class="header">
+
+            BOLETA LISTA 1
+        </header>
+        
+            <div class="image-container">
+                <img src="../images/boletaLista1.jpg" alt="Boleta Lista 1">
+            </div>
+            
+        
+        <footer class="footer">
+            <a href="../index.html" class="btn">VOLVER A INICIO</a>
+        </footer>
+    </div>
+    <script>
+        // Cargar el menú de navegación desde la ruta correcta
+        fetch("../menu.html")  // Subir un nivel en la estructura de carpetas
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("menu-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error cargando el menú:", error));
+    </script>
+</body>
+
+</html>
