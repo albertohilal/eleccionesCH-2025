@@ -45,7 +45,7 @@ body {
     position: relative;
 }
 
-/* Menú oculto por defecto en móviles */
+/* Ocultar menú en móviles por defecto */
 #nav-menu {
     display: none;
     position: absolute;
@@ -59,7 +59,7 @@ body {
     overflow: hidden;
 }
 
-/* Mostrar menú cuando se active */
+/* Mostrar menú cuando se active en móviles */
 #nav-menu.active {
     display: flex;
     flex-direction: column;
@@ -72,13 +72,9 @@ body {
 .navbar ul {
     list-style: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
     text-align: center;
     background: #010066; /* Fondo azul */
-}
-
-.navbar ul li {
-    padding: 10px;
 }
 
 /* Hacer que los enlaces del menú sean blancos */
@@ -114,20 +110,34 @@ body {
     padding: 10px;
 }
 
-/* Ajustes en pantallas grandes */
+/* Ocultar menú hamburguesa en escritorio */
 @media (min-width: 768px) {
-    .navbar {
-        justify-content: center;
+    .menu-toggle {
+        display: none !important;
     }
 
     #nav-menu {
-        display: flex;
+        display: flex !important;
         position: static;
         max-height: none;
+        flex-direction: row; /* Menú en línea */
     }
 
-    .menu-toggle {
-        display: none;
+    .navbar ul {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Espaciado entre los elementos */
+    }
+
+    .navbar ul li {
+        display: inline;
+        padding: 5px 10px;
+    }
+
+    /* Reducir el tamaño de la fuente en pantallas grandes */
+    .navbar ul li a {
+        font-size: 0.9em;
+        padding: 5px 10px;
     }
 }
 
