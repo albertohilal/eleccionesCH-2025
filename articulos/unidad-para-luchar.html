@@ -15,6 +15,40 @@
 <body>
     <div class="container">
         <header id="menu-container"></header>
+        <!-- Contenedor del menú -->
+<header id="menu-container"></header>
+
+<script>
+    // Cargar el menú de navegación desde menu.html en cualquier página
+    fetch("../menu.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("menu-container").innerHTML = data;
+            setupMenu(); // Llamar a la función para inicializar el menú después de cargarlo
+        })
+        .catch(error => console.error("Error cargando el menú:", error));
+
+    function setupMenu() {
+        setTimeout(() => {
+            const toggleButton = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("#nav-menu");
+
+            if (toggleButton && navMenu) {
+                toggleButton.addEventListener("click", function () {
+                    navMenu.classList.toggle("active");
+                });
+            }
+
+            // Resaltar la página activa
+            document.querySelectorAll(".nav-link").forEach(link => {
+                if (window.location.href.includes(link.getAttribute("href"))) {
+                    link.classList.add("active-link");
+                }
+            });
+        }, 500);
+    }
+</script>
+
         <header class="header">
             
             UNIDAD PARA LUCHAR, NO PARA DIVIDIR
